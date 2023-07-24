@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* Colors */
+
+--Dark-purple:#1b0326;
+--Soft-red:rgb(193, 8, 8);
+--Cyan:#00feba;
+--Medium-purple:#5b548a;
+--White:#fff;
+--Dark-gray: #555;
+--Medium-white:#ebfffc;
+
+    /* Fonts */
+
+--Font-size:16px;
+--Font-Family:'Poppins', sans-serif;;
+--Font-weight-normal:300;
+--Font-weight-medium:500;
+--Font-weight-bold:700;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: var(--Font-size);
+    font-family: var(--Font-Family);
+    background-color:var(--Dark-purple);
+}
+.card{
+    width: min(90%,450px);
+    background: linear-gradient(135deg,var(--Cyan),var(--Medium-purple));
+    color: var(--White);
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: center;
+}
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search > input{
+    border: none;
+    outline: 0;
+    background-color:var(--Medium-white);
+    color: var(--Dark-gray);
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+.search > button{
+    border: none;
+    outline: 0;
+    background-color:var(--Medium-white);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.search > button > img{
+    width: 20px;
+}
+.whether-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+.weather > h1{
+    font-size: 80px;
+    font-weight: var(--Font-weight-medium);
+}
+.weather > h2{
+    font-size: 45px;
+    font-weight:400;
+    margin-top: -10px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 0;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col > img{
+    width: 50px;
+    margin-right: 10px;
+}
+.humidity,.wind{
+    font-size: 28px;
+    margin-top: -6px;
+}
+.weather{
+    display: none;
+}
+.error{
+    text-align:left;
+    margin-left: -9rem;
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: var(--Font-weight-bold);
+    color:var(--Soft-red);
+}
+@media (max-width:450px) {
+    .search {
+        justify-content:space-evenly;
+    }
+    .search > input{
+        width: 80%;
+    }
+    .error{
+        margin-left: -3rem;
+    }
+}
